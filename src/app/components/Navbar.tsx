@@ -8,6 +8,7 @@ import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
+import DropComp from "./DropComp/DropComp";
 import DropDown from "./DropDown/DropDown";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
@@ -19,7 +20,6 @@ import Typography from "@mui/material/Typography";
 
 const pages = ["Careers", "About"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
-
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -45,7 +45,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar color="transparent" position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -64,7 +64,7 @@ function Navbar() {
               textDecoration: "none",
             }}
           >
-            LOGO
+            snap
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -120,15 +120,16 @@ function Navbar() {
               textDecoration: "none",
             }}
           >
-            LOGO
+            snap
           </Typography>
           <DropDown />
+          <DropComp />
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ my: 2, color: "black", display: "block" }}
               >
                 {page}
               </Button>

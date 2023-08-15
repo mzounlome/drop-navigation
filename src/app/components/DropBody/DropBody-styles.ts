@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const DropDiv = styled.div`
   height: 100%;
   width: 30%;
-  
   padding: 2rem;
   display: flex;
   flex-direction: column;
